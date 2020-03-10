@@ -1,100 +1,74 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('common.master')
 
-        <title>Laravel</title>
+@section('content')
+    <section class="hero  is-medium  is-bold is-primary">
+        <div class="hero-body" style="
+            background: url('https://www.hz.nl/imager/uploads/images/3.-Werk-en-studie/Headers/docent-coacht-studenten-003_c8fa470484be7b69be5daae77a1602c5.jpg') no-repeat center center;
+            background-size: cover;"
+        ></div>
+    </section>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <section class="section">
+        <div class="container">
+            <div class="columns">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+                <div class="column is-12">
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <div class="content">
+                        <h1>Welkom op de website van de HZ.</h1>
+                        <p>
+                            Posuere porttitor natoque velit duis penatibus fermentum dignissim ut? Vel vel mi purus
+                            tempor nec conubia platea venenatis. Mauris pharetra auctor magnis, vehicula integer risus
+                            taciti gravida semper fames! Eu fermentum lorem accumsan litora. Consequat dapibus interdum
+                            primis lorem. Convallis integer mi suscipit tempor. Ad tincidunt placerat at. Sagittis
+                            pulvinar consectetur commodo, placerat varius sociosqu egestas felis! Curae; dictumst porta
+                            tempus. Nisi nec morbi netus euismod egestas proin sed tempor. Nam feugiat ante ante.
+                            Conubia vehicula tincidunt facilisis quisque risus senectus convallis. Eget at feugiat vel
+                            nisi. Tortor, facilisis neque elementum ultricies blandit amet orci dictumst eu mi molestie.
+                            Libero vulputate porta proin volutpat suspendisse aenean aenean facilisi ut primis!
+                            Venenatis elementum auctor neque urna et facilisis vulputate erat lorem habitasse libero!
+                            Risus ornare quam rutrum praesent blandit congue aliquet mauris.
+                        </p>
+                        <p>
+                            Elementum orci eget vel adipiscing tempor malesuada? Sollicitudin euismod nunc feugiat
+                            accumsan accumsan condimentum nulla pellentesque sagittis habitasse suspendisse praesent?
+                            Lectus proin justo vulputate tristique duis metus, est pellentesque blandit quam pharetra.
+                            Maecenas tincidunt litora mauris mollis ornare dictum nec placerat lectus massa lobortis
+                            auctor. Hac feugiat dolor, ac ridiculus mi adipiscing aptent elementum suspendisse augue
+                            rutrum! Habitasse a consequat ornare dictumst integer dis porta.
+                        </p>
+                        <p>
+                            Blandit mollis felis gravida sem ad venenatis ut a lacus! Magna odio netus, torquent rhoncus
+                            fames velit. Adipiscing libero, class cursus ipsum penatibus enim mollis netus. Sociis
+                            luctus eros sapien platea parturient fringilla. Senectus purus tincidunt laoreet purus
+                            praesent. Accumsan pulvinar tincidunt gravida malesuada senectus proin, elit cubilia
+                            lobortis quisque tellus? Torquent dis natoque sapien natoque sagittis conubia pulvinar risus
+                            elementum hac adipiscing arcu. Sem nisl fusce phasellus adipiscing pretium eget hendrerit
+                            proin non. Vestibulum lacus magna, commodo volutpat.
+                        </p>
+                        <p>
+                            Vivamus ridiculus amet arcu. Magnis venenatis vehicula venenatis molestie molestie proin sed
+                            blandit, inceptos volutpat. Auctor auctor massa sodales ipsum. Congue est quisque porta?
+                            Porta phasellus sem torquent ad feugiat sollicitudin nisi tempor tortor habitasse. Eros
+                            condimentum enim blandit pulvinar. Justo aenean, taciti curae; diam volutpat cubilia ante
+                            vestibulum. Augue penatibus phasellus inceptos tortor convallis ridiculus at ad. Nisl
+                            curabitur vel gravida, montes sit velit pellentesque. Sem, dapibus maecenas urna lectus
+                            mauris quisque nibh accumsan amet curabitur egestas dolor. Sagittis montes magnis quam
+                            fringilla accumsan bibendum. Nisl, a laoreet himenaeos sapien lorem quisque taciti lacus
+                            elit mauris. Mollis eleifend montes commodo? Accumsan nullam venenatis malesuada netus metus
+                            sociosqu magnis velit. Rhoncus lacus tempus praesent fermentum netus ullamcorper dolor
+                            integer nulla.
+                        </p>
+                        <p>
+                            Habitasse suspendisse egestas vestibulum pellentesque per leo enim metus donec ad. Hac metus
+                            convallis nibh eget, parturient dis elementum posuere. Felis, ultricies fusce est cubilia
+                            facilisis odio id velit dapibus suspendisse. Erat praesent nullam aliquam. Rutrum commodo
+                            eget malesuada per montes, curae; senectus convallis sociis per. Risus mattis justo vivamus
+                            lorem bibendum aenean eleifend facilisi, suscipit consectetur libero litora. Interdum?
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </section>
+@endsection
