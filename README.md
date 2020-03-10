@@ -2,7 +2,7 @@
 
 # Project-name
 
-Manage a volleyball competition.
+One liner project description here.
 
 ## Features
 
