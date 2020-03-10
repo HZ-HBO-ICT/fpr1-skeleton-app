@@ -16,6 +16,10 @@
                    class="navbar-item {{ Request::path() === '/' ? "is-active" : "" }}">
                     Home
                 </a>
+                <a href="/posts"
+                   class="navbar-item {{ Request::path() === 'posts' ? "is-active" : "" }}">
+                    Nieuws
+                </a>
             </div>
         </div>
     </div>
