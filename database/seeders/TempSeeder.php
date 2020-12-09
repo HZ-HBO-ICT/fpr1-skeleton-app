@@ -1,8 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
-class PostSeeder extends Seeder
+class TempSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +13,6 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Post::class, 15)->create();
+        //
     }
 }
