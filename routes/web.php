@@ -20,7 +20,7 @@ Route::get('/', function () {
     $latestPosts = Post::orderBy('published_at', 'desc')->take(3)->get();
 
     return view('welcome', compact('latestPosts'));
-});
+})->name('home');
 
 // Resource routes of the base pages. For more info on Resource Routes
 Route::resource('/posts', PostController::class);

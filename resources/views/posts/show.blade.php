@@ -18,7 +18,7 @@
                 <div class="column is-12">
 
                     <div class="content">
-                        <p>Gepubliceerd op: {{ $post->published_at }}</p>
+                        <p>Published at: {{ $post->published_at }}</p>
 
                         {!! $post->body !!}
                     </div>
