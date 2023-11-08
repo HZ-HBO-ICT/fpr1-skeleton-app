@@ -30,23 +30,24 @@ The simplest way that ensures all the files are as close to a fresh installation
 1. Clone this repository
 2. Create a branch `update-to-laravel-##.##` (##.## should equal the laravel version in question)
 3. Create a fresh Laravel installation alongside the clone
-4. Copy-paste the added features (see features chapter) into the new app
-5. Check code style and test functionality
-6. Empty the cloned repo folder (leave the `.git` folder of course)
-7. Copy the content of the new app into the repository folder
-8. Commit with a message: `Upgrade to Laravel ##.##` (##.## should equal the laravel version in question) and push
+4. Check `.gitignore` and migrate possible new rules in a version specific section inder 'Laravel'
+5. Copy-paste the added features (see features chapter) into the new app
+6. Check code style and test functionality
+7. Empty the cloned repo folder (leave the `.git` folder of course)
+8. Copy the content of the new app into the repository folder
+9. Commit with a message: `Upgrade to Laravel ##.##` (##.## should equal the laravel version in question) and push
 
 ## Authors
 
 * **Daan de Waard** - *Initial work* - [dwaard](https://github.com/dwaard)
 
-See also the list of [contributors](url-to-project-contributors-page) who 
+See also the list of [contributors](https://github.com/HZ-HBO-ICT/laravel-skeleton-app/graphs/contributors) who
 participated in this project.
 
 ## Acknowledgements
 
 The layout of this app is heavily inspired by the [Bulma clean theme](http://www.csrhymes.com/bulma-clean-theme/). We
-thank the author [C.S. Rhymes](https://www.csrhymes.com/) for this.    
+thank the author [C.S. Rhymes](https://www.csrhymes.com/) for this.
 
 The installation instructions in this file are based on [DevMarketers](https://devmarketer.io/learn/author/devmarketer/)
 outstanding article [How to Setup a Laravel Project You Cloned from Github.com](https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/)
