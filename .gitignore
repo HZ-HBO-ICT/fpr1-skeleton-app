@@ -1,5 +1,5 @@
-# Created by https://www.gitignore.io/api/laravel,phpstorm,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=laravel,phpstorm,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/laravel,phpstorm,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=laravel,phpstorm,visualstudiocode
 
 ### Laravel ###
 /vendor/
@@ -14,6 +14,11 @@ app/storage/
 # Laravel 5 & Lumen specific
 public/storage
 public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
 storage/*.key
 .env
 Homestead.yaml
@@ -21,25 +26,38 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
-# Laravel 10 specific
+# Laravel 6-11 specific
 /.phpunit.cache
-# /public/build # NOT ignored so the prebuilt assets are available for students
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
 .env.backup
 .env.production
-auth.json
+.phpactor.json
+/auth.json
 /.fleet
-
+/.idea
+/.nova
+/.vscode
+/.zed
 
 ### PhpStorm ###
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-.idea
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
 .idea/**/contentModel.xml
@@ -61,6 +79,9 @@ auth.json
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
 # .idea/modules.xml
 # .idea/*.iml
 # .idea/modules
@@ -88,6 +109,9 @@ atlassian-ide-plugin.xml
 # Cursive Clojure plugin
 .idea/replstate.xml
 
+# SonarLint plugin
+.idea/sonarlint/
+
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
@@ -109,14 +133,30 @@ fabric.properties
 # *.ipr
 
 # Sonarlint plugin
+# https://plugins.jetbrains.com/plugin/7973-sonarlint
 .idea/**/sonarlint/
 
 # SonarQube Plugin
+# https://plugins.jetbrains.com/plugin/7238-sonarqube-community-plugin
 .idea/**/sonarIssues.xml
 
 # Markdown Navigator plugin
+# https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced
 .idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator-enh.xml
 .idea/**/markdown-navigator/
+
+# Cache file creation bug
+# See https://youtrack.jetbrains.com/issue/JBR-2257
+.idea/$CACHE_FILE$
+
+# CodeStream plugin
+# https://plugins.jetbrains.com/plugin/12206-codestream
+.idea/codestream.xml
+
+# Azure Toolkit for IntelliJ plugin
+# https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
+.idea/**/azureSettings.xml
 
 ### VisualStudioCode ###
 .vscode/*
@@ -124,9 +164,19 @@ fabric.properties
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+.ionide
 
-# End of https://www.gitignore.io/api/laravel,phpstorm,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/laravel,phpstorm,visualstudiocode
+
+
