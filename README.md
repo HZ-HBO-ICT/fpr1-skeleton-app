@@ -8,12 +8,12 @@ Laravel Skeleton App. Base project for all HZ-HBO-ICT Laravel projects.
 
 This repository contains the following features
 * Holds the 'this is the version we work with for this year'
-* Custom workflow action based on PHPCodeSniffer. Checks codestyle rules relevant for our Laravel based courses and exams
 * Customized `.gitignore` that ignores files and folders specific for our supported IDEs
+* Custom PHPCodeSniffer rules relevant for our Laravel based courses and exams. 
+* Custom GitHub workflow action based on PHPCodeSniffer.
+* Removed all references to Tailwind
 * Customizable Bulma integration
 * Font-awesome integration
-* Removed all references to Tailwind in the views
-* Basic tests
 
 ## Usage
 
@@ -27,15 +27,44 @@ can pull these updates into their own codebase.
 
 The simplest way that ensures all the files are as close to a fresh installation as possible is:
 
-1. Clone this repository
-2. Create a branch `update-to-laravel-##.##` (##.## should equal the laravel version in question)
-3. Create a fresh Laravel installation alongside the clone
-4. Check `.gitignore` and migrate possible new rules in a version specific section inder 'Laravel'
-5. Copy-paste the added features (see features chapter) into the new app
-6. Check code style and test functionality
-7. Empty the cloned repo folder (leave the `.git` folder of course)
-8. Copy the content of the new app into the repository folder
-9. Commit with a message: `Upgrade to Laravel ##.##` (##.## should equal the laravel version in question) and push
+1. Create a fresh Laravel installation; remember the Laravel version.
+2. Clone this repository alongside the new app.
+3. Create and checkout a new branch. Run the command `git branch -b update-to-laravel-##.##` (##.## should equal the 
+   laravel version in question).
+4. Then migrate the correct sections like features and config from the cloned repo into the new app. See the sections below.
+5. Empty the cloned repo folder (leave the `.git` folder of course)
+6. Copy the content of the new app into the repository folder
+7. Commit with a message: `Replaced with fresh Laravel ##.## installation` (##.## should equal the laravel version in question) and push
+
+#### Update README.md
+- Copy the content of README.md from the cloned repo and replace its content in the new app. You might review the content.
+
+#### Update gitignore
+- Copy the content of `.gitignore` and paste it above the original content in the new app. 
+- Check the original content and remove the duplicate declarations. 
+- Move the remaining declarations to a version specific section under 'Laravel', i.e. `# Laravel 12 specific`.
+
+#### Integrate PHPCodeSniffer
+- Copy the `phpcs.xml` file.
+- Run the command `composer require --dev squizlabs/php_codesniffer`.
+- Test the installation by running `./vendor/bin/phpcs`.
+- Copy the `.github` folder to migrate the GH workflow.
+
+#### Switch from Tailwind to Bulma and Font Awesome
+- Remove the Tailwind reference: `npm uninstall tailwindcss`.
+- Remove `tailwind.config.js` file.
+- Remove the tailwindcss plugin from `postcss.config.js`.
+- Add the required packages by running the following command: `npm install sass bulma 
+  @fortawesome/fontawesome-free`
+- Remove all content from `resources/css/app.css`.
+- Copy the folder `resources/sass`.
+- Update `vite.config.js` to replace the app.js with the sass folder content.
+
+#### Copy the main view
+- Copy the content of `resourses/views/welcome.blade.php`.
+- Update the `'/'` route in `routes/web.php`.
+- Run the app to test if everything is working.
+
 
 ## Authors
 
